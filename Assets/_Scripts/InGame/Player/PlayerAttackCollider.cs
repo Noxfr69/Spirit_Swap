@@ -19,6 +19,7 @@ private void OnTriggerStay2D(Collider2D other) {
     Debug.Log(other);
     other.TryGetComponent<HealthComponent>(out HealthComponent component);
     if(component != null && component.gameObject.layer == 7){
+        //if healing secondary
         component.OnHit(Damage);
         Destroy(gameObject,0.1f);
     }

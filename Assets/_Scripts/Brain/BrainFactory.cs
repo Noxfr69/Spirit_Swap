@@ -20,5 +20,11 @@ public BrainState HubState(){
     return new HubState(_Brain, this);
 }
 
+public BrainState DeathState(){
+    return new DeathState(_Brain, this);
+}
 
+public BrainState WinState(){
+    return new WinState(_Brain, this);
+}
 }
