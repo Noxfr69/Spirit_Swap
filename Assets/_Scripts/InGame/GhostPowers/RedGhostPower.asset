@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: RedGhostPower
   m_EditorClassIdentifier: 
   swordColor: {r: 1, g: 0, b: 0, a: 1}
-  ghostImage: {fileID: 408149024, guid: 858bd37dc40201742914c06dd70e3162, type: 3}
+  ghostImage: {fileID: 1585009625, guid: 3fe10dc109591d94d93b660ca57369b8, type: 3}
   powerActivted: 0
   isUnlocked: 0
   ID: 1

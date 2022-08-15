@@ -27,4 +27,21 @@ public BrainState DeathState(){
 public BrainState WinState(){
     return new WinState(_Brain, this);
 }
+public BrainState CreditState(){
+    return new CreditState(_Brain, this);
+}
+public BrainState Level2State(){
+    return new Level2State(_Brain, this);
+}
+public BrainState Level3State(){
+    return new Level3State(_Brain, this);
+}
+public BrainState Level4State(){
+    return new Level4State(_Brain, this);
+}
+public BrainState TutoState(){
+    return new TutoState(_Brain, this);
+}
+
+
 }

@@ -20,4 +20,19 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Scenes/WinScreen.unity
     guid: 6b373cc319d906d408f520b5f669a037
+  - enabled: 1
+    path: Assets/_Scenes/Credits.unity
+    guid: 630e2483b17503f419099722de932500
+  - enabled: 1
+    path: Assets/_Scenes/Level2.unity
+    guid: d2f9dee0a6091724eb00824794375d21
+  - enabled: 1
+    path: Assets/_Scenes/Level3.unity
+    guid: 7951834ce84469347a5f7eaee0721745
+  - enabled: 1
+    path: Assets/_Scenes/Level4.unity
+    guid: f8f9272e23fb8a44aa6ba60c4233abb7
+  - enabled: 1
+    path: Assets/_Scenes/Tuto.unity
+    guid: 7749f4e4f49e93348840a86236f77def
   m_configObjects: {}

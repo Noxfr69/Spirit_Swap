@@ -16,6 +16,7 @@ public class RedMonsterAgent : MonoBehaviour
     public float AttackRange = 500;
     public MMF_Player AttackLoading;
     public MMF_Player Explosion;
+    public MMF_Player AgroSound;
     private bool AttackStarted=false;
     private bool Attacking=false;
     public int Monsterdamage= 20;
@@ -38,6 +39,9 @@ public class RedMonsterAgent : MonoBehaviour
     private void Update() {
         curDistance = Player.transform.position - transform.position;
         if(Mathf.Abs(curDistance.x) < AgroDistance.x && Mathf.Abs(curDistance.y) < AgroDistance.y  || Agroed){
+            if(!Agroed){
+                AgroSound?.PlayFeedbacks();
+            }
             Agroed = true;
             Agent.SetDestination(Player.transform.position);
 

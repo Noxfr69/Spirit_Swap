@@ -15,6 +15,11 @@ public class BrainManager : MonoBehaviour
   public bool _hubAsked = false;
   public bool _DeathAsk = false;
   public bool _WinAsked = false;
+  public bool _CreditAsked = false;
+  public bool _Level2Asked = false;
+  public bool _Level3Asked = false;
+  public bool _Level4Asked = false;
+  public bool _tutorialAsked = false;
   public static event Action CloseYourUI;
   public GameObject Timer;
   public float timer;
@@ -55,12 +60,17 @@ public class BrainManager : MonoBehaviour
     }
 
     public void StartGame(){
-        _startAsked = true;
+        _startAsked = true;        
         StartCoroutine(ChangeBool());
     }
 
     public void HubAsked(){
+        if(PlayerPrefs.GetInt("TutoDone",0) == 0){
+            PlayerPrefs.SetInt("TutoDone", 1);
+            _tutorialAsked = true;
+        }else{
         _hubAsked = true;
+        }
         StartCoroutine(ChangeBool());
     }
 
@@ -74,6 +84,27 @@ public class BrainManager : MonoBehaviour
         StartCoroutine(ChangeBool());
     }
 
+    public void CreditAsked(){
+        _CreditAsked = true;
+        StartCoroutine(ChangeBool());
+    }
+    public void Level2Asked(){
+        _Level2Asked = true;
+        StartCoroutine(ChangeBool());
+    }
+    public void Level3Asked(){
+        _Level3Asked = true;
+        StartCoroutine(ChangeBool());
+    }
+    public void Level4Asked(){
+        _Level4Asked = true;
+        StartCoroutine(ChangeBool());
+    }
+    public void TutorialAsked(){
+        _tutorialAsked = true;
+        StartCoroutine(ChangeBool());
+    }
+
     public IEnumerator ChangeBool(){
         yield return new WaitForSeconds(0.5f);
         _menuAsked = false;
@@ -81,6 +112,11 @@ public class BrainManager : MonoBehaviour
         _startAsked = false;
         _DeathAsk = false;
         _WinAsked = false;
+        _CreditAsked = false;
+        _Level2Asked = false;
+        _Level3Asked = false;
+        _Level4Asked = false;
+        _tutorialAsked = false;
     }
 
     #endregion

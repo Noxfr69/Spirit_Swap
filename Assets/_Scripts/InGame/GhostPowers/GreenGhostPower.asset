@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: GreenGhostPower
   m_EditorClassIdentifier: 
   swordColor: {r: 0.15496778, g: 1, b: 0, a: 1}
-  ghostImage: {fileID: 1695563863, guid: 490e0e486cc0bfb4dbd193a673b109a4, type: 3}
+  ghostImage: {fileID: 740559719, guid: 99e6184a28284ac40a23e7dcd4131462, type: 3}
   powerActivted: 0
   isUnlocked: 0
   ID: 3

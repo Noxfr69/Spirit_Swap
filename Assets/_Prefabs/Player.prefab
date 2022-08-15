@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 1227734044}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.565, y: 1.52, z: 0}
-  m_LocalScale: {x: 0.08, y: 0.08, z: 0.08}
+  m_LocalScale: {x: 0.14, y: 0.14, z: 0.14}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 9026424366081143021}
@@ -73,9 +73,9 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 408149024, guid: 858bd37dc40201742914c06dd70e3162, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_SortingOrder: 10
+  m_Sprite: {fileID: -991257928, guid: f3044ec657b61d44e9f05e789f70ec55, type: 3}
+  m_Color: {r: 0.81568635, g: 0.23137257, b: 0.2784314, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -95,7 +95,7 @@ Animator:
   m_GameObject: {fileID: 1227734044}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 1d8fd2d82ec45774bbdddbe187c48da0, type: 2}
+  m_Controller: {fileID: 9100000, guid: 054588cf0d56aa345b5e5b1332e12400, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -337,8 +337,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5146659531247161119}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.538, y: 1.4698, z: 0}
-  m_LocalScale: {x: 0.096096, y: 0.096096, z: 0.096096}
+  m_LocalPosition: {x: -0.567, y: 1.518, z: 0}
+  m_LocalScale: {x: 0.14, y: 0.14, z: 0.14}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 9026424366081143021}
@@ -384,9 +384,9 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 1695563863, guid: 490e0e486cc0bfb4dbd193a673b109a4, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_SortingOrder: 10
+  m_Sprite: {fileID: -991257928, guid: f3044ec657b61d44e9f05e789f70ec55, type: 3}
+  m_Color: {r: 0.6313726, g: 1, b: 0.5019608, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -406,7 +406,7 @@ Animator:
   m_GameObject: {fileID: 5146659531247161119}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 937b707c553a506418fac76ea1e1a4a6, type: 2}
+  m_Controller: {fileID: 9100000, guid: 054588cf0d56aa345b5e5b1332e12400, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -2106,7 +2106,6 @@ MonoBehaviour:
   FeedbacksList:
   - rid: 1520742512447193094
   - rid: 1520742512447193095
-  - rid: 1520742512447193101
   KeepPlayModeChanges: 0
   PerformanceMode: 0
   ForceStopFeedbacksOnDisable: 1
@@ -2298,50 +2297,6 @@ MonoBehaviour:
           m_RotationOrder: 4
         RemapIntensityZero: 0
         RemapIntensityOne: 0.5
-    - rid: 1520742512447193101
-      type: {class: MMF_Sound, ns: MoreMountains.Feedbacks, asm: MoreMountains.Feedbacks.MMTools}
-      data:
-        Active: 1
-        UniqueID: -537681090
-        Label: Sound
-        Channel: 0
-        Chance: 100
-        DisplayColor: {r: 0, g: 0, b: 0, a: 1}
-        Timing:
-          TimescaleMode: 0
-          ExcludeFromHoldingPauses: 0
-          ContributeToTotalDuration: 1
-          InitialDelay: 0
-          CooldownDuration: 0
-          InterruptsOnStop: 1
-          NumberOfRepeats: 0
-          RepeatForever: 0
-          DelayBetweenRepeats: 1
-          MMFeedbacksDirectionCondition: 0
-          PlayDirection: 0
-          ConstantIntensity: 0
-          UseIntensityInterval: 0
-          IntensityIntervalMin: 0
-          IntensityIntervalMax: 0
-          Sequence: {fileID: 0}
-          TrackID: 0
-          Quantized: 0
-          TargetBPM: 120
-        Owner: {fileID: 392225026576282903}
-        DebugActive: 0
-        Sfx: {fileID: 8300000, guid: 540338992e144a94f8499f7a227cad72, type: 3}
-        RandomSfx: []
-        TestPlayButton:
-          ButtonText: Debug Play Sound
-        TestStopButton:
-          ButtonText: Debug Stop Sound
-        PlayMethod: 2
-        PoolSize: 10
-        MinVolume: 1
-        MaxVolume: 1
-        MinPitch: 1
-        MaxPitch: 1
-        SfxAudioMixerGroup: {fileID: 24300002, guid: c9c457c520899284b8952fe1e4a8e5c3, type: 2}
 --- !u!1 &8933761616780603973
 GameObject:
   m_ObjectHideFlags: 0
@@ -2368,8 +2323,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8933761616780603973}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.5848, y: 1.4837, z: 0}
-  m_LocalScale: {x: 0.06876, y: 0.06876, z: 0.06876}
+  m_LocalPosition: {x: -0.563, y: 1.52, z: 0}
+  m_LocalScale: {x: 0.14, y: 0.14, z: 0.14}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 9026424366081143021}
@@ -2415,9 +2370,9 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 1591980077, guid: 6d97293d969d021488735a52982cb2a1, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_SortingOrder: 10
+  m_Sprite: {fileID: -991257928, guid: f3044ec657b61d44e9f05e789f70ec55, type: 3}
+  m_Color: {r: 0.4039216, g: 0.77647066, b: 0.7843138, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -2437,7 +2392,7 @@ Animator:
   m_GameObject: {fileID: 8933761616780603973}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: eeb24ba321c1287489248e361ec7138f, type: 2}
+  m_Controller: {fileID: 9100000, guid: 054588cf0d56aa345b5e5b1332e12400, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -21955,7 +21910,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   RightCollider: {fileID: 56518990552767051, guid: 51a9d00e6d0cbd249854ac08f20c8e18, type: 3}
   LeftCollider: {fileID: 5137501170805272598, guid: 8f9fed61c12d2b848ab1e252fa0ecfa5, type: 3}
+  RangeAttack: {fileID: 2790109220163996482, guid: 8a3c0be3797bca947850fc5d9d740484, type: 3}
   playerDamage: 50
+  SR: {fileID: 3909670450668679828}
+  normalSword: {fileID: 9100000, guid: e833d044086441b4aba4b6d4383f0e75, type: 2}
+  bigSword: {fileID: 9100000, guid: 904661bbcf1fbca4fac5eee8b870252b, type: 2}
 --- !u!114 &2523315891085883413
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21996,11 +21955,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HPFill: {fileID: 0}
   HP: 100
-  Armor: 0
   Deathfeedback: {fileID: 392225026576282903}
   Hitfeedback: {fileID: 4168677903055832195}
   MusicMaster: {fileID: 24100000, guid: 6c0e69568036895438d1a0eb3d363072, type: 2}
   DeathStarted: 0
+  _playerPower: {fileID: 0}
+  DeathAudioClip: {fileID: 8300000, guid: 540338992e144a94f8499f7a227cad72, type: 3}
 --- !u!50 &9026424366081143023
 Rigidbody2D:
   serializedVersion: 4
@@ -36871,6 +36831,7 @@ MonoBehaviour:
   _swordeffectAnim: {fileID: 649136263601805836}
   _attackFeedback: {fileID: 5221970392740137227}
   _landingFeedback: {fileID: 5221970394023461131}
+  charging: {fileID: 8300000, guid: 1ae0b3067a882124ab3cd8fc2f35ff6f, type: 3}
   _moveParticles: {fileID: 9026424365960277834}
   _tileChangeSpeed: 0.05
   _footstepClips:

@@ -15,6 +15,7 @@ public class BlueMonsterAgent : MonoBehaviour
     private Vector3 curDistance;
     public float AttackRange = 500;
     public MMF_Player AttackLoading;
+    public MMF_Player AgroSound;
     private bool AttackStarted=false;
     public int Monsterdamage= 10;
     public GameObject RangeAttack;
@@ -37,6 +38,9 @@ public class BlueMonsterAgent : MonoBehaviour
     private void Update() {
         curDistance = Player.transform.position - transform.position;
         if(Mathf.Abs(curDistance.x) < AgroDistance.x && Mathf.Abs(curDistance.y) < AgroDistance.y  || Agroed){
+            if(!Agroed){
+                AgroSound?.PlayFeedbacks();
+            }
             Agroed = true;
             Agent.SetDestination(Player.transform.position);
 
@@ -49,7 +53,6 @@ public class BlueMonsterAgent : MonoBehaviour
         if(Vector3.Distance(Player.transform.position, transform.position)< AttackRange && !AttackStarted){
             AttackStarted = true;
             Agent.isStopped = true;
-            AttackLoading?.PlayFeedbacks();
             StartCoroutine(MonsterAttack());
         }
 
@@ -66,7 +69,7 @@ public class BlueMonsterAgent : MonoBehaviour
         if(n<0) n += 360;
         range.transform.eulerAngles = new Vector3(0,0,n);
         var rb = range.GetComponent<Rigidbody2D>();
-        rb.AddForce(Dir, ForceMode2D.Impulse);
+        rb.AddForce(Vector3.Normalize(Dir)*10 , ForceMode2D.Impulse);
         yield return new WaitForSeconds(1f);
         AttackStarted = false;
         Agent.isStopped = false;

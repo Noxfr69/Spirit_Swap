@@ -12,8 +12,9 @@ public class LevelWinCheck : MonoBehaviour
     public Color32 lockedcollor = new Color32(111,111,111,188);
     public List<Image> images = new List<Image>();
     BrainManager brainManager;
-    [SerializeField] private MMF_Player winFeedback;
+    [SerializeField] private AudioClip WinAudioClip;
     public AudioMixer MusicMaster;
+    private AudioSource persitentAudio;
     private float curentmusiclevel;
     private bool winStarted= false;
     string s;
@@ -28,6 +29,7 @@ public class LevelWinCheck : MonoBehaviour
         }
         brainManager.CurrentLevelID = SceneManager.GetActiveScene().buildIndex;
         s = brainManager.CurrentLevelID.ToString();
+        persitentAudio = brainManager.GetComponentInChildren<AudioSource>();
     }
 
 
@@ -39,7 +41,7 @@ public class LevelWinCheck : MonoBehaviour
         if(collectedItem == 5 && !winStarted){
             winStarted=true;
             brainManager.finaltimer = brainManager.timer;
-            winFeedback?.PlayFeedbacks();
+            persitentAudio.PlayOneShot(WinAudioClip);
             MusicMaster.GetFloat("MusicVolume", out float value);
             curentmusiclevel = value;
             MusicMaster.SetFloat("MusicVolume", -90);

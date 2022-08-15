@@ -18,7 +18,6 @@ public class MoonLockedOrNot : MonoBehaviour
         if(letmework)return;
         letmework = true;
         Collider2D[] hit2D = Physics2D.OverlapCircleAll(transform.position,10f);
-        Debug.Log(hit2D.Length);
         foreach (var item in hit2D)
         {
             if(item.gameObject.layer == 7){

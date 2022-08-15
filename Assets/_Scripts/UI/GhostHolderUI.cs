@@ -99,7 +99,7 @@ public class GhostHolderUI : MonoBehaviour
             Ghost3.color = unSelected;
             Ghost1.color = Selected;
             CurrentSelected = soGhost1;
-            if(_playerPower.isPower3Unlocked){
+            if(_playerPower.isPower1Unlocked){
                 _playerPower.BlueFollower.SetActive(false);
                 _playerPower.RedFollower.SetActive(true);
                 _playerPower.GreenFollower.SetActive(false);

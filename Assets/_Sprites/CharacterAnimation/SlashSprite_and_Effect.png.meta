@@ -644,9 +644,9 @@ TextureImporter:
       name: SlashSprite_and_Effect_25
       rect:
         serializedVersion: 2
-        x: 549
+        x: 552
         y: 598
-        width: 456
+        width: 453
         height: 772
       alignment: 9
       pivot: {x: 0.57297933, y: 0.41982496}

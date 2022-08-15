@@ -18,6 +18,12 @@ public class MainMenuState : BrainState
         if(_Brain._hubAsked){
             SwitchState(_Factory.HubState());
         }
+        if(_Brain._CreditAsked){
+            SwitchState(_Factory.CreditState());
+        }
+        if(_Brain._tutorialAsked){
+            SwitchState(_Factory.TutoState());
+        }
     }
 
     public override void EnterState()

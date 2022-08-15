@@ -16,9 +16,17 @@ public class HubState : BrainState
         if(_Brain._startAsked){
             SwitchState(_Factory.StartGame());
         }
-
         if(_Brain._menuAsked){
             SwitchState(_Factory.MainMenu());
+        }
+        if(_Brain._Level2Asked){
+            SwitchState(_Factory.Level2State());
+        }
+        if(_Brain._Level3Asked){
+            SwitchState(_Factory.Level3State());
+        }
+        if(_Brain._Level4Asked){
+            SwitchState(_Factory.Level4State());
         }
     }
 

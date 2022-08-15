@@ -292,6 +292,17 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
+                    ""id"": ""8da583e3-266e-48d5-b0ef-5854f2bed2a4"",
+                    ""path"": ""<Keyboard>/shift"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Dash"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
                     ""id"": ""0568f55d-4e6c-420d-84e7-9c855eddb769"",
                     ""path"": ""<Keyboard>/z"",
                     ""interactions"": """",
@@ -327,7 +338,7 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
                     ""name"": """",
                     ""id"": ""9d5c4ff0-7f14-4645-9098-5d29ab5dd7bd"",
                     ""path"": ""<Keyboard>/f"",
-                    ""interactions"": ""Hold(duration=0.15)"",
+                    ""interactions"": ""Hold(duration=0.2)"",
                     ""processors"": """",
                     ""groups"": ""Keyboard&Mouse"",
                     ""action"": ""GhostSelect"",

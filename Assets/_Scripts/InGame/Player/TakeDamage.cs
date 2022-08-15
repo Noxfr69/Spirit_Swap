@@ -19,10 +19,15 @@ public class TakeDamage : MonoBehaviour
     public AudioMixer MusicMaster;
     private float curentmusiclevel;
     public bool DeathStarted = false;
+    public PlayerPower _playerPower;
+    private AudioSource persitentAduio;
+    public AudioClip DeathAudioClip;
 
     private void Awake() {
         brainManager = GameObject.Find("Brain").GetComponent<BrainManager>();
         DeathStarted = false;
+        _playerPower = GetComponent<PlayerPower>();
+        persitentAduio = brainManager.GetComponentInChildren<AudioSource>();
     }
 
     private void Start() {
@@ -30,8 +35,16 @@ public class TakeDamage : MonoBehaviour
         HP = 100;
     }
 
-    public void Heal(){
+    private void Update() {
+        if(_playerPower.BlueFollower.activeSelf){
+            Armor = 10;
+        }else Armor = 0;
+    }
 
+    public void Heal(int healing){
+        HP += healing;
+        if(HP > 100){HP=100;}
+        HPFill.fillAmount = (HP / 100f);
     }
 
     public void takeDamage(int damage){
@@ -54,6 +67,7 @@ public class TakeDamage : MonoBehaviour
     public IEnumerator PlayerDeath(){
         DeathStarted = true;
         Deathfeedback?.PlayFeedbacks();
+        persitentAduio.PlayOneShot(DeathAudioClip);
         Time.timeScale = 0;
         yield return new WaitForSecondsRealtime(4f);
         MusicMaster.SetFloat("MusicVolume", curentmusiclevel);

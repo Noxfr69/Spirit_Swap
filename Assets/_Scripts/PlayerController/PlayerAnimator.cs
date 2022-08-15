@@ -13,6 +13,7 @@ namespace TarodevController {
         private MMF_Player _attackFeedback;
         [SerializeField]
         private MMF_Player _landingFeedback;
+        [SerializeField] AudioClip charging;
 
         private void Awake() {
             _player = GetComponentInParent<IPlayerController>();

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: BlueGhostPower
   m_EditorClassIdentifier: 
   swordColor: {r: 0, g: 0.3468349, b: 1, a: 1}
-  ghostImage: {fileID: 1760701615, guid: 6d97293d969d021488735a52982cb2a1, type: 3}
+  ghostImage: {fileID: 1106176974, guid: 1d7a5ce9c1a9bcb4787dcf437276c7ee, type: 3}
   powerActivted: 1
   isUnlocked: 0
   ID: 2
